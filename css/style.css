@@ -1,0 +1,511 @@
+/* 全体のフォントをNoto Sans JPに設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    max-width: 1440px;
+    padding-top: 120px;
+}
+
+header {
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    padding: 0 16px;
+    width: 100%;
+    margin-left: 180px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header-nav-wrapper {
+    width: 100vw;
+    height: 40px;
+    margin-left: -16px;
+    margin-right: -16px;
+    background-color:#333;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-left: 160px;
+}
+
+.header-nav li {
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+.header-nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+/* ----------------------------------------------------------------*/
+
+
+.pickup {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 30px;
+    margin-left: 160px;
+}
+
+.pickup-card {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pickup-card p {
+    font-weight:bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pickup-card a {
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-block;
+    width: fit-content;
+    color: #333;
+    margin: 0 auto;
+    text-decoration: none; /* text-decoration は無効化 */
+    position: relative; /* 下線用の疑似要素を配置するために必要 */
+}
+
+/* 疑似要素でアンダーバーを作成 */
+.pickup-card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%; /* 初期状態では下線を100%表示 */
+    height: 1px;
+    background-color: #333;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; /* デフォルトで表示 */
+}
+
+/* ホバー時にアンダーバーをゆっくり消す */
+.pickup-card a:hover::after {
+    opacity: 0; /* 下線のみフェードアウト */
+}
+
+/* --------------------------------------------------------------- */
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: 160px;
+    padding-bottom: 120px;
+}
+
+main {
+    max-width: 65%;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.main-card h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.main-card-data {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.main-card-data li {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+
+.main-card a {
+    font-weight: 400;
+    font-size: 14px;
+    display: inline-block;
+    width: fit-content;
+    color: #333;
+    margin: 0 auto;
+    text-decoration: none; /* text-decoration は無効化 */
+    position: relative; /* 下線用の疑似要素を配置するために必要 */
+}
+
+/* 疑似要素でアンダーバーを作成 */
+.main-card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%; /* 初期状態では下線を100%表示 */
+    height: 1px;
+    background-color: #333;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; /* デフォルトで表示 */
+}
+
+/* ホバー時にアンダーバーをゆっくり消す */
+.main-card a:hover::after {
+    opacity: 0; /* 下線のみフェードアウト */
+}
+
+.main-card p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 20px 30px;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+
+/* ----------------------------------------------*/
+
+
+aside {
+    max-width: 30%;
+    padding: 10px;
+}
+
+.aside-author {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.aside-author img {
+    display: block;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.aside-author h3 {
+    font-size: 700;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.aside-author p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.aside-ranking {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.aside-ranking img {
+    width: 100%;
+}
+
+.aside-ranking h3 {
+    font-size: 700;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.aside-ranking p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px auto;
+    color: #333;
+}
+
+
+.aside-archive {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.aside-archive h3 {
+    font-size: 700;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+
+.archive-data {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.archive-data li {
+    border-bottom: 1px solid #777;
+    padding: 16px;
+}
+
+.archive-data li:first-child {
+    border-top: 1px solid #777;
+}
+
+.archive-data li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+
+/* --------------------------------------------------- */
+
+footer {
+    width: 100vw;
+    padding: 40px 0;
+    text-align: left;
+    background-color:#f7f7f7;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin: 0 auto;
+    /* background-color: yellowgreen; */
+}
+
+.footer-section {
+    width: 30%;
+    padding: 0 10px;
+    margin: 0 auto;
+    /* background-color: tomato; */
+}
+
+.section-about h3 {
+    color: #333;
+}
+
+.section-about p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+
+.about-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.about-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin: 2px
+}
+
+.section-menu h3 {
+    color: #333;
+}
+
+
+.menu-data {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-data li {
+    border-bottom: 1px solid #777;
+    padding: 14px;
+    font-size: 14px;
+}
+
+.menu-data li:first-child {
+    border-top: 1px solid #777;
+}
+
+.menu-data li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.section-twitter .twitter-timeline {
+    width: 100%;
+    height: 300px;
+}
+
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    color: #333;
+    font-size: 12px;
+    background-color:#f7f7f7;
+    margin-left: 40px;
+}
+
+
+
+/* ==========================
+📱 スマートフォン用レスポンシブデザイン
+   ========================== */
+@media (max-width: 768px) {
+
+    h1 {
+        text-align: left;
+        margin-left: 16px;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content:flex-start;
+        padding: 10px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header-nav li {
+        margin: 20px 25px;
+        white-space: nowrap;
+    }
+
+    /* pickup セクション（記事カード） */
+    .pickup {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .pickup-card {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .pickup-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pickup-card p {
+        text-align: left;
+    }
+
+    .pickup-card a {
+        display: block;
+        margin-top: 10px;
+    }
+
+
+    /* main と aside を縦並びに */
+    .container {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 0;
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+        width: 100vw;
+        padding: 20px;
+    }
+
+
+    .main-card img {
+        width: 100vw;
+        height: auto;
+        max-width: 100%;
+    }
+
+
+    aside {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .aside-ranking p{
+        text-align: left;
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    .archive-data {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 100px;
+}
+
+
+
+
+    /* footer を 1 列に */
+    .footer-content {
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .section-about h3 {
+        margin-top: -10px;
+    }
+
+
+    .copyright {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
