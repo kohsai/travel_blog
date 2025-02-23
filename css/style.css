@@ -1,7 +1,6 @@
 /* 全体のフォントをNoto Sans JPに設定 */
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    max-width: 1440px;
+    font-family: 'Noto Sans','Noto Sans JP', sans-serif;
     padding-top: 120px;
 }
 
@@ -9,9 +8,8 @@ header {
     max-width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     background-color: white;
 }
 
@@ -19,7 +17,7 @@ h1 {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     font-size: 28px;
-    padding: 0 16px;
+    padding: 0 20px;
     width: 100%;
     margin-left: 180px;
 }
@@ -30,10 +28,8 @@ h1 a {
 }
 
 .header-nav-wrapper {
-    width: 100vw;
+    width: 100%;
     height: 40px;
-    margin-left: -16px;
-    margin-right: -16px;
     background-color:#333;
     display: flex;
     align-items: center;
@@ -45,7 +41,7 @@ h1 a {
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    margin-left: 160px;
+    margin-left: 150px;
 }
 
 .header-nav li {
@@ -67,7 +63,7 @@ h1 a {
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-    padding: 40px 30px;
+    padding: 40px;
     margin-left: 160px;
 }
 
@@ -83,33 +79,38 @@ h1 a {
     color: #333;
 }
 
-.pickup-card a {
+/* -------------------------------------- */
+
+.pickup-card a,
+.main-card a {
+    color: #333;
     font-weight: 400;
     font-size: 14px;
     display: inline-block;
     width: fit-content;
-    color: #333;
     margin: 0 auto;
-    text-decoration: none; /* text-decoration は無効化 */
-    position: relative; /* 下線用の疑似要素を配置するために必要 */
+    position: relative;
+    text-decoration: none;
 }
 
 /* 疑似要素でアンダーバーを作成 */
-.pickup-card a::after {
+.pickup-card a::after,
+.main-card a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -1px;
-    width: 100%; /* 初期状態では下線を100%表示 */
+    width: 100%;
     height: 1px;
     background-color: #333;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1; /* デフォルトで表示 */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* ホバー時にアンダーバーをゆっくり消す */
-.pickup-card a:hover::after {
-    opacity: 0; /* 下線のみフェードアウト */
+.pickup-card a:hover::after,
+.main-card a:hover::after {
+    transform: translateY(3px);
+    opacity: 0;
 }
 
 /* --------------------------------------------------------------- */
@@ -126,7 +127,7 @@ h1 a {
 main {
     max-width: 65%;
     padding: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
 }
 
@@ -155,40 +156,11 @@ main {
 }
 
 
-.main-card a {
-    font-weight: 400;
-    font-size: 14px;
-    display: inline-block;
-    width: fit-content;
-    color: #333;
-    margin: 0 auto;
-    text-decoration: none; /* text-decoration は無効化 */
-    position: relative; /* 下線用の疑似要素を配置するために必要 */
-}
-
-/* 疑似要素でアンダーバーを作成 */
-.main-card a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%; /* 初期状態では下線を100%表示 */
-    height: 1px;
-    background-color: #333;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1; /* デフォルトで表示 */
-}
-
-/* ホバー時にアンダーバーをゆっくり消す */
-.main-card a:hover::after {
-    opacity: 0; /* 下線のみフェードアウト */
-}
-
 .main-card p {
     font-weight: 400;
     font-size: 16px;
     margin: 20px 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     color: #333;
 }
 
@@ -295,25 +267,25 @@ aside {
 /* --------------------------------------------------- */
 
 footer {
-    width: 100vw;
-    padding: 40px 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 0;
     text-align: left;
     background-color:#f7f7f7;
+    position: relative;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     max-width: 1220px;
-    margin: 0 auto;
-    /* background-color: yellowgreen; */
+    margin: 20px auto 60px;
+    padding-left: 40px;
 }
 
 .footer-section {
-    width: 30%;
-    padding: 0 10px;
-    margin: 0 auto;
-    /* background-color: tomato; */
+    width: 32%;
+    padding: 0 20px;
 }
 
 .section-about h3 {
@@ -368,7 +340,7 @@ footer {
 }
 
 
-.section-twitter .twitter-timeline {
+.twitter-timeline {
     width: 100%;
     height: 300px;
 }
@@ -380,8 +352,7 @@ footer {
     padding: 5px 0;
     color: #333;
     font-size: 12px;
-    background-color:#f7f7f7;
-    margin-left: 40px;
+    position: absolute;
 }
 
 
