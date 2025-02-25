@@ -1,4 +1,3 @@
-/* 全体のフォントをNoto Sans JPに設定 */
 body {
     font-family: 'Noto Sans','Noto Sans JP', sans-serif;
     padding-top: 120px;
@@ -107,7 +106,7 @@ h1 a {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* ホバー時にアンダーバーをゆっくり消す */
+/* ホバー時にアンダーバーを下げゆっくり消す */
 .pickup-card a:hover::after,
 .main-card a:hover::after {
     transform: translateY(3px);
@@ -393,7 +392,6 @@ footer {
         text-align: left;
         margin-left: auto;
         margin-bottom: 10px;
-        /* background-color: turquoise; */
     }
 
     .header-nav {
@@ -410,7 +408,7 @@ footer {
         white-space: nowrap;
     }
 
-    /* pickup セクション（記事カード） */
+    /* ------------------------------ */
     .pickup {
         flex-direction: column;
         margin: 15px;
@@ -438,8 +436,9 @@ footer {
         margin-top: 10px;
     }
 
+/* ----------------------------------- */
 
-    /* main と aside を縦並びに */
+/* main と aside を縦並びに */
     .container {
         flex-direction: column;
         margin: 0;
@@ -489,7 +488,6 @@ footer {
         text-align: left;
         width: 100%;
         padding: 15px;
-        /* background-color: springgreen; */
     }
 
     .footer-section {
