@@ -1,6 +1,6 @@
-body {
+html, body {
     font-family: 'Noto Sans','Noto Sans JP', sans-serif;
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
 header {
@@ -118,7 +118,7 @@ h1 a {
     max-width: 1200px;
     width: 100%;
     margin-left: 160px;
-    padding-bottom: 120px;
+    padding-bottom: 110px;
 }
 
 main {
@@ -282,10 +282,12 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    max-width: 1220px;
-    margin: 20px auto 60px;
-    padding-left: 30px;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 100%;
+    width: 100%;
+    margin: 10px auto;
+    padding-left: 170px;
 }
 
 .footer-content h3 {
@@ -294,8 +296,8 @@ footer {
 }
 
 .footer-section {
-    width: 32%;
-    padding: 0 20px;
+    width: 28%;
+    padding-left: 30px;
 }
 
 .section-about h3 {
@@ -332,14 +334,14 @@ footer {
 
 .arrow::before {
     content: '';
-    width: 0;
-    height: 0;
     border-style: solid;
     border-width: 6px 0 6px 8px;
-    border-color: transparent transparent transparent #333;
+    width: 0;
+    height: 0;
     position: absolute;
     top: 50%;
     left: 0;
+    border-color: transparent transparent transparent #333;
     margin-top: -6px;
 }
 
@@ -393,10 +395,11 @@ footer {
 /* ==========================
 📱 スマートフォン用レスポンシブデザイン
    ========================== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     html, body {
-        overflow-x: hidden;
+        overflow-x: scroll;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -406,17 +409,30 @@ footer {
         margin-bottom: 10px;
     }
 
+    .header-nav-wrapper {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        background-color: #333;
+        overflow: hidden;
+    }
+
+
     .header-nav {
         display: flex;
         flex-wrap: nowrap;
-        justify-content:flex-start;
-        padding: 10px 0;
+        align-items: center;
+        padding: 0;
         margin: 0;
-        width: 100%;
+        min-width: max-content;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* iOS向けスムーズスクロール */
     }
 
     .header-nav li {
         margin: 10px 30px 10px 10px;
+        display: flex;
+        align-items: center;
         white-space: nowrap;
     }
 
@@ -499,14 +515,17 @@ footer {
         flex-direction: column;
         text-align: left;
         width: 100%;
-        padding: 0;
+        padding: 30px 20px;
+        margin: 0;
     }
 
     .footer-section {
         width: 100%;
+        max-width: 100%;
+        padding: 0;
     }
 
-    .section-about h3 {
+    .footer-section h3 {
         margin-top: -10px;
     }
 
