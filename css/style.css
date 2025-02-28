@@ -70,7 +70,7 @@ h1 a {
     width: 32%;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .pickup-card p {
@@ -313,7 +313,7 @@ footer {
 
 .about-links {
     margin-top: 10px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -395,6 +395,41 @@ footer {
 /* ==========================
 📱 スマートフォン用レスポンシブデザイン
    ========================== */
+
+@media (max-width: 1200px) {
+    h1 {
+        margin-left: 140px;
+    }
+    .header-nav {
+        margin-left: 110px;
+    }
+    .pickup,
+    .container {
+        margin-left: 120px;
+    }
+    .footer-content {
+        padding-left: 130px;
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        margin-left: 80px;
+    }
+    .header-nav {
+        margin-left: 50px;
+    }
+    .pickup,
+    .container {
+        margin-left: 60px;
+    }
+    .footer-content {
+        padding-left: 70px;
+    }
+}
+
+
+
 @media (max-width: 767px) {
 
     html, body {
@@ -439,8 +474,8 @@ footer {
     /* ------------------------------ */
     .pickup {
         flex-direction: column;
-        margin: 15px;
-        padding: 15px;
+        margin: 10px;
+        padding: 20px;
         align-items: center;
         width: 100%;
     }
@@ -478,7 +513,7 @@ footer {
         max-width: 100%;
         width: 100%;
         margin: 0;
-        padding: 15px;
+        padding: 20px;
     }
 
 
@@ -494,7 +529,7 @@ footer {
         max-width: 100%;
         width: 100%;
         margin-top: 20px;
-        padding: 15px;
+        padding: 20px;
     }
 
     .aside-ranking p{
